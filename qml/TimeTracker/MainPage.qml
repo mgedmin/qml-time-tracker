@@ -16,47 +16,7 @@ Page {
         anchors.top: header.bottom
         anchors.bottom: parent.bottom
         clip: true
-        model: ListModel {
-            ListElement {
-                title: "work work"
-                durationMinutes: 137 // 2 * 60 + 17
-            }
-            ListElement {
-                title: "quick lunch **"
-                durationMinutes: 30
-            }
-            ListElement {
-                title: "more work"
-                durationMinutes: 182 // 3 * 60 + 2
-            }
-            ListElement {
-                title: "placeholder"
-                durationMinutes: 60
-            }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "long long long placeholder text goes here"; durationMinutes: 65 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "so I wonder what happens when I have realistically long task titles"; durationMinutes: 0 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-        }
+        model: placeholderTasks
         delegate: Item {
             height: 64
             width: parent.width
@@ -82,9 +42,9 @@ Page {
 
                 function formatTime(minutes) {
                     if (minutes >= 60) {
-                        return Math.floor(minutes / 60) + " h " + minutes % 60 + " min"
+                        return Math.floor(minutes / 60) + " h " + Math.floor(minutes % 60) + " min"
                     } else {
-                        return minutes + " min"
+                        return Math.floor(minutes) + " min"
                     }
                 }
 
