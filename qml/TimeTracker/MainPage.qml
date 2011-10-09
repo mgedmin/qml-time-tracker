@@ -4,34 +4,10 @@ import com.nokia.meego 1.0
 Page {
     tools: taskListTools
 
-    Rectangle {
+    Header {
         id: header
+        title: "Time Log"
         color: '#f0b010'
-        width: parent.width
-        height: 72
-
-        Text {
-            x: 16
-            anchors.verticalCenter: parent.verticalCenter
-            text: "Time Log"
-            color: "white"
-            font.pixelSize: 32
-        }
-
-        // It would be better to use a background image, perhaps?
-        Rectangle {
-            height: 1
-            width: parent.width
-            anchors.bottom: parent.bottom
-            color: "#10000000"
-        }
-        Rectangle {
-            height: 1
-            width: parent.width
-            anchors.top: parent.bottom
-            anchors.topMargin: 1
-            color: "white"
-        }
     }
 
     ListView {
