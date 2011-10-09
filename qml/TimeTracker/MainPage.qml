@@ -15,6 +15,18 @@ Page {
             color: "white"
             font.pixelSize: 32
         }
+
+        Button {
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.right: parent.right
+            anchors.rightMargin: 16
+            width: height
+            text: "+"
+            platformStyle: ButtonStyle {
+                fontWeight: Font.Bold
+            }
+        }
+
         // It would be better to use a background image, perhaps?
         Rectangle {
             height: 1
