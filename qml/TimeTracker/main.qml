@@ -14,9 +14,8 @@ PageStackWindow {
 
     ToolBarLayout {
         id: taskListTools
-        visible: true
         ToolIcon {
-            anchors.centerIn: parent
+            anchors.centerIn: parent // a single icon is left-aligned by default
             platformIconId: "icon-m-toolbar-add"
             onClicked: {
                 placeholderTasks.append({title: "placeholder", durationMinutes: Math.random() * 120 })
