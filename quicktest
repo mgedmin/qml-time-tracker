@@ -1,0 +1,3 @@
+#!/bin/sh
+rsync -r quicktest.py qml mg-n950:TimeTracker/
+ssh -t mg-n950 'source ~/.profile; TimeTracker/quicktest.py'
