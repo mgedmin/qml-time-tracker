@@ -9,7 +9,7 @@ Page {
         height: 72
 
         Text {
-            x: 20
+            x: 16
             anchors.verticalCenter: parent.verticalCenter
             text: "Time Log"
             color: "white"
@@ -38,77 +38,49 @@ Page {
             }
             ListElement {
                 title: "placeholder"
-                durationMinutes: 0
+                durationMinutes: 60
             }
-            ListElement {
-                title: "placeholder"
-                durationMinutes: 0
-            }
-            ListElement {
-                title: "placeholder"
-                durationMinutes: 0
-            }
-            ListElement {
-                title: "placeholder"
-                durationMinutes: 0
-            }
-            ListElement {
-                title: "placeholder"
-                durationMinutes: 0
-            }
-            ListElement {
-                title: "placeholder"
-                durationMinutes: 0
-            }
-            ListElement {
-                title: "placeholder"
-                durationMinutes: 0
-            }
-            ListElement {
-                title: "placeholder"
-                durationMinutes: 0
-            }
-            ListElement {
-                title: "placeholder"
-                durationMinutes: 0
-            }
-            ListElement {
-                title: "placeholder"
-                durationMinutes: 0
-            }
-            ListElement {
-                title: "placeholder"
-                durationMinutes: 0
-            }
-            ListElement {
-                title: "placeholder"
-                durationMinutes: 0
-            }
-            ListElement {
-                title: "placeholder"
-                durationMinutes: 0
-            }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "placeholder"; durationMinutes: 0 }
         }
         delegate: Item {
-            height: 80
+            height: 64
             width: parent.width
             Text {
                 id: titleText
-                anchors.left: parent.left
-                anchors.leftMargin: 20
+                x: 16
                 anchors.verticalCenter: parent.verticalCenter
                 text: title
-                font.pixelSize: 32
+                font.pixelSize: 24
             }
             Text {
-//                anchors.baseline: titleText.baseline
                 anchors.verticalCenter: parent.verticalCenter
-                anchors.verticalCenterOffset: 3
                 anchors.right: parent.right
-                anchors.rightMargin: 20
+                anchors.rightMargin: 16
                 text: formatTime(durationMinutes)
-                font.pixelSize: 24
-                color: Qt.rgba(0.5, 0.5, 0.5, 1.0)
+                font.pixelSize: 22
+                color: '#808080'
 
                 function formatTime(minutes) {
                     if (minutes >= 60) {
