@@ -59,6 +59,7 @@ Page {
             }
             ListElement { title: "placeholder"; durationMinutes: 0 }
             ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "long long long placeholder text goes here"; durationMinutes: 65 }
             ListElement { title: "placeholder"; durationMinutes: 0 }
             ListElement { title: "placeholder"; durationMinutes: 0 }
             ListElement { title: "placeholder"; durationMinutes: 0 }
@@ -73,8 +74,7 @@ Page {
             ListElement { title: "placeholder"; durationMinutes: 0 }
             ListElement { title: "placeholder"; durationMinutes: 0 }
             ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
-            ListElement { title: "placeholder"; durationMinutes: 0 }
+            ListElement { title: "so I wonder what happens when I have realistically long task titles"; durationMinutes: 0 }
             ListElement { title: "placeholder"; durationMinutes: 0 }
             ListElement { title: "placeholder"; durationMinutes: 0 }
             ListElement { title: "placeholder"; durationMinutes: 0 }
@@ -86,12 +86,17 @@ Page {
             width: parent.width
             Text {
                 id: titleText
-                x: 16
+                anchors.left: parent.left
+                anchors.leftMargin: 16
                 anchors.verticalCenter: parent.verticalCenter
+                anchors.right: durationText.left
+                anchors.rightMargin: 10
                 text: title
                 font.pixelSize: 24
+                elide: Text.ElideRight
             }
             Text {
+                id: durationText
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.right: parent.right
                 anchors.rightMargin: 16
